@@ -518,7 +518,8 @@ header ul.main-nav .dropdown:hover .mega-menu {
 .team-member .team-content .box {
    position: relative;
 }
-.team-member .team-content .box::after {
+.team-member .team-content .box::after,
+.team-member .team-content .box::before {
    content: "";
    position: absolute;
    background-color: #e4e4e4;
@@ -530,14 +531,8 @@ header ul.main-nav .dropdown:hover .mega-menu {
    z-index: -2;
 }
 .team-member .team-content .box::before {
-   content: "";
-   position: absolute;
    background-color: #d4d4d4;
    width: 0;
-   height: 100%;
-   top: 0;
-   right: 0;
-   border-radius: 10px;
    z-index: -1;
    transition: var(--main-tr-duration);
 }
@@ -598,12 +593,12 @@ header ul.main-nav .dropdown:hover .mega-menu {
 }
 .services .services-content .srv-box:hover {
    transform: translateY(-10px);
-   box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 .services .services-content .srv-box::before {
-   content: '';
+   content: "";
    position: absolute;
-   bottom:100%;
+   bottom: 100%;
    left: 50%;
    transform: translateX(-50%);
    width: 0;
@@ -630,7 +625,7 @@ header ul.main-nav .dropdown:hover .mega-menu {
    position: relative;
 }
 .services .services-content .srv-box .info::before {
-   content: '0' counter(info-num);
+   content: "0" counter(info-num);
    position: absolute;
    left: 0;
    top: 0;
@@ -647,11 +642,11 @@ header ul.main-nav .dropdown:hover .mega-menu {
    box-sizing: content-box;
 }
 .services .services-content .srv-box .info::after {
-   content: '';
+   content: "";
    position: absolute;
    top: 0;
    left: 80px;
-   background-color: #E2E2E2;
+   background-color: #e2e2e2;
    width: 50px;
    height: 100%;
    transform: skewX(-30deg);
@@ -660,6 +655,47 @@ header ul.main-nav .dropdown:hover .mega-menu {
    color: var(--main-color);
 }
 /* End Services */
+/* Start Our Skills */
+.skils {
+   padding: var(--main-padding);
+}
+.skils-container {
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.skils-container .skils-con {
+   flex: 1;
+}
+.skils-container img {
+   max-width: 100%;
+}
+.skils-container .skils-con .skil {
+   margin-top: 20px;
+}
+.skils-container .skils-con .skil .text {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 5px;
+}
+.skils-container .skils-con .skil .text span {
+   color: var(--main-color);
+   font-size: 0.75rem;
+   font-weight: 700;
+   border: 1px solid #c6c6c6;
+   padding: 0 5px;
+   border-radius: 5px;
+}
+.skils-container .skils-con .skil .progres {
+   background-color: #ececec;
+}
+.skils-container .skils-con .skil .progres-color {
+   height: 30px;
+   background-color: var(--main-color-alt);
+}
+/* End Our Skills */
 /**
 * ! ----------------------------------------------------------- 
 */
@@ -775,6 +811,10 @@ header ul.main-nav .dropdown:hover .mega-menu {
    }
    /* mega menu */
    .mega-menu .image {
+      display: none;
+   }
+   /* skils */
+   .skils-container img {
       display: none;
    }
 }
