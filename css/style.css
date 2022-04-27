@@ -752,6 +752,21 @@ header ul.main-nav .dropdown:hover .mega-menu {
    padding: var(--main-padding);
    position: relative;
 }
+.events .dots {
+   position: absolute;
+   background: url(../imgs/dots.png) no-repeat;
+   width: 204px;
+   height: 186px;
+   z-index: -1;
+}
+.events .dots-up {
+   bottom: 100px;
+   left: 0;
+}
+.events .dots-down {
+   right: 0;
+   top: 100px;
+}
 .events .event-content {
    padding: var(--main-padding);
 }
