@@ -701,6 +701,7 @@ header ul.main-nav .dropdown:hover .mega-menu {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   align-items: center;
    gap: var(--main-gap);
 }
 .works-content figure img {
