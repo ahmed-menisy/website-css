@@ -845,10 +845,117 @@ header ul.main-nav .dropdown:hover .mega-menu {
    cursor: pointer;
 }
 /* end event */
+/* start plans */
+.plans {
+   padding: var(--main-padding);
+   background-color: var(--section-bg);
+}
+.plans-content {
+   padding: var(--main-padding);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: var(--main-gap);
+}
+.plans-content .plan {
+   position: relative;
+   z-index: 1;
+   background-color: #fff;
+   padding: 1rem 0;
+   text-align: center;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.plans-content .plan::after,
+.plans-content .plan::before {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 50%;
+   background-color: #f6f6f6;
+   z-index: -1;
+   transition: width var(--main-tr-duration);
+}
+.plans-content .plan::after {
+   top: 0;
+   left: 0;
+}
+.plans-content .plan::before {
+   bottom: 0;
+   right: 0;
+}
+.plans-content .plan:hover::after,
+.plans-content .plan:hover::before {
+   width: 100%;
+}
+.plans-content .plan:nth-child(2) {
+   position: relative;
+   top: -30px;
+}
+.plans-content .plan:nth-child(2) .label {
+   position: absolute;
+   top: 0;
+   right: 20px;
+   background-color: var(--main-color);
+   color: #fff;
+   writing-mode: vertical-rl;
+   font-size: 1.2rem;
+   font-weight: 600;
+   padding: 0.7rem 0.2rem 1.5rem;
+}
+.plans-content .plan:nth-child(2) .label::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   border: 20px solid;
+   border-color: transparent transparent #fff;
+}
+.plans-content .plan h3 {
+   font-size: 1.65rem;
+}
+.plans-content img {
+   width: 80px;
+   margin: 1.5rem auto;
+}
+.plans-content .price span {
+   display: block;
+}
+.plans-content .price span.pric {
+   font-size: 3.5rem;
+   line-height: 1.15;
+   font-weight: 800;
+   color: var(--main-color);
+}
+.plans-content .price span.text {
+   color: #777;
+   font-size: 1rem;
+   margin-bottom: 1.5rem;
+}
+.plans-content .plan ul li {
+   border-top: 1px solid #eee;
+}
+.plans-content .plan ul li {
+   padding: 0.5rem 0;
+}
+.plans-content .plan a {
+   display: block;
+   width: fit-content;
+   margin: 2rem auto 1rem;
+   padding: 0.65rem 1.3rem;
+   border-radius: 5px;
+   color: var(--main-color);
+   font-weight: 700;
+   border: 2px solid var(--main-color);
+   transition: background-color var(--main-tr-duration);
+}
+.plans-content .plan a:hover {
+   background-color: var(--main-color);
+   color: #fff;
+}
+/* end plans */
 /**
 * ! ----------------------------------------------------------- 
 */
-
 /* Start Animation  */
 /* landing */
 @keyframes img-move {
